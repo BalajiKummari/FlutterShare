@@ -11,6 +11,7 @@ import 'package:fluttershare/pages/search.dart';
 import 'package:fluttershare/pages/profile.dart';
 
 final GoogleSignIn googleSignIn = GoogleSignIn();
+final userscollectionRef = Firestore.instance.collection('users');
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -20,7 +21,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> 
 {
-  final userscollectionRef = Firestore.instance.collection('users');
       bool isAuth = false;
       PageController pageController;
       int pageIndex = 0;
